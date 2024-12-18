@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohan Ram</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+            background-color: #000;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ccc;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            margin-left: 2rem;
+        }
+
+        .social-icons a {
+            margin-left: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.1);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #000;
+            padding: 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #aaa;
+            max-width: 600px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-item h2 {
+            font-size: 3rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-item p {
+            font-size: 1rem;
+            color: #aaa;
+        }
+        /* About Section */
+        .about-section {
+            padding: 5rem 2rem;
+            text-align: center;
+            background-color: #111;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-section p {
+            font-size: 1.1rem;
+            color: #aaa;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Projects Section */
+        .projects-section {
+            padding: 5rem 2rem;
+            background-color: #000;
+            text-align: center;
+        }
+
+        .projects-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: #222;
+            padding: 2rem;
+            border-radius: 5px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-card img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: #aaa;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1.5rem 2rem;
+            background-color: #000;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero-section">
+        <nav class="navigation">
+            <div class="logo">Mohan Ram</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Store</a></li>
+                <li class="social-icons">
+                    <a href="https://www.instagram.com/mohan.ram.s/" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.linkedin.com/in/mohanramsridhar/" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://github.com/MohanRamSridhar" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Representing the persistence and<br>passion that never fades.</h1>
+            <!-- <p>Designing experiences that inspire.</p> -->
+            <div class="stats">
+                <div class="stat-item">
+                    <h2 id="leetcode-solved">0</h2>
+                    <p>Leetcode Problems Solved</p>
+                </div>
+                <div class="stat-item">
+                    <h2 id="codechef-rating">0</h2>
+                    <p>CodeChef Rating</p>
+                </div>
+                <div class="stat-item">
+                    <h2 id="codeforces-rating">0</h2>
+                    <p>CodeForces Rating</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--
+    <main>
+        <section id="about" class="about-section">
+            <div class="content">
+                <h2>About Me</h2>
+                <p>I am a passionate designer and developer with a love for creating impactful user experiences.</p>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <h2>My Work</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>Project Title</h3>
+                    <p>Brief description of the project.</p>
+                </div>
+                <div class="project-card">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Project Title</h3>
+                    <p>Brief description of the project.</p>
+                </div>
+                <div class="project-card">
+                    <img src="project3.jpg" alt="Project 3">
+                    <h3>Project Title</h3>
+                    <p>Brief description of the project.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    -->
+
+    <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+<script>
+    // Function to animate counters
+    function animateCounter(id, start, end, duration) {
+        const element = document.getElementById(id);
+        let current = start;
+        const increment = Math.ceil((end - start) / (duration / 16));
+
+        const updateCounter = () => {
+            current += increment;
+            if (current > end) current = end;
+            element.textContent = current;
+            if (current < end) {
+                requestAnimationFrame(updateCounter);
+            }
+        };
+
+        updateCounter();
+    }
+
+    // Trigger the counters
+    document.addEventListener("DOMContentLoaded", () => {
+        animateCounter("leetcode-solved", 0, 177, 2000); // Replace 500 with your Leetcode problems solved
+        animateCounter("codechef-rating", 0, 1740, 2000); // Replace 1800 with your CodeChef rating
+        animateCounter("codeforces-rating", 0, 1150, 2000); // Replace 1500 with your CodeForces rating
+    });
+</script>
+</html>
