@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="/Users/mohanram/Desktop/Portfolio/logo.png" type="image/icon type">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohan Ram</title>
@@ -129,10 +130,30 @@
             color: #aaa;
         }
         /* About Section */
-        .about-section {
-            padding: 5rem 2rem;
+        .about-section {            
+            padding: 2rem 2rem;
             text-align: center;
-            background-color: #111;
+            position: relative;
+            overflow: hidden;
+            height: 70vh; /* Adjust based on your preference */
+        }
+        
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        
+        .about-section .content {
+            position: relative;
+            z-index: 1;
+            color: white; /* Adjust for visibility */
+            text-align: center;
+            padding: 20px;
         }
 
         .about-section h2 {
@@ -142,14 +163,14 @@
 
         .about-section p {
             font-size: 1.1rem;
-            color: #aaa;
+            color: #ffffff;
             max-width: 800px;
             margin: 0 auto;
         }
 
         /* Projects Section */
         .projects-section {
-            padding: 5rem 2rem;
+            padding: 2rem 2rem;
             background-color: #000;
             text-align: center;
         }
@@ -166,7 +187,7 @@
         }
 
         .project-card {
-            background-color: #222;
+            background-color: #000000;
             padding: 2rem;
             border-radius: 5px;
             text-align: center;
@@ -198,7 +219,7 @@
         footer {
             text-align: center;
             padding: 1.5rem 2rem;
-            background-color: #000;
+            background-color: #121212;
             color: #aaa;
             font-size: 0.9rem;
         }
@@ -244,13 +265,15 @@
             </div>
         </div>
     </header>
-
-    <!--
     <main>
         <section id="about" class="about-section">
+            <video class="background-video" autoplay muted loop>
+                <source src="aboutme.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             <div class="content">
                 <h2>About Me</h2>
-                <p>I am a passionate designer and developer with a love for creating impactful user experiences.</p>
+                <p>I'm a dedicated and enthusiastic learner with a burning passion for competitive programming. While I may be new to this thrilling world, I am committed to honing my skills and embracing the challenge of solving complex problems.</p>
             </div>
         </section>
 
@@ -258,30 +281,38 @@
             <h2>My Work</h2>
             <div class="project-grid">
                 <div class="project-card">
-                    <img src="project1.jpg" alt="Project 1">
-                    <h3>Project Title</h3>
-                    <p>Brief description of the project.</p>
+                    <img src="paper1.png" alt="Project 1">
+                    <h3>Research Paper</h3>
+                    <p>Co-authored and presented the research paper "Quantum Kernel-based Support Vector Machine with Quantum Approximate Optimization Algorithm Embedding for Improved Lung Cancer Prediction" at the 2024 ICCCNT, held at IIT Mandi.</p>
                 </div>
                 <div class="project-card">
-                    <img src="project2.jpg" alt="Project 2">
-                    <h3>Project Title</h3>
-                    <p>Brief description of the project.</p>
+                    <img src="comingsonn.png" alt="Project 2">
+                    <!-- <h3>Title</h3> -->
+                    <!-- <p>Brief description of the project.</p> -->
                 </div>
                 <div class="project-card">
-                    <img src="project3.jpg" alt="Project 3">
-                    <h3>Project Title</h3>
-                    <p>Brief description of the project.</p>
+                    <img src="comingsonn.png" alt="Project 3">
+                    <!-- <h3>Title</h3> -->
+                    <!-- <p>Brief description of the project.</p> -->
                 </div>
             </div>
         </section>
     </main>
-    -->
 
     <footer>
         <p>&copy; 2024 My Portfolio. All rights reserved.</p>
     </footer>
 </body>
 <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const video = document.querySelector('.background-video');
+        if (video) {
+            video.muted = true; // Ensure the video is muted
+            video.play().catch(error => {
+                console.error("Autoplay failed:", error);
+            });
+        }
+    });
     // Function to animate counters
     function animateCounter(id, start, end, duration) {
         const element = document.getElementById(id);
